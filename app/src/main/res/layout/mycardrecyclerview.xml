@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="123123"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/card_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price  - $"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="@id/txt_name"
+            app:layout_constraintTop_toBottomOf="@id/txt_name" />
+
+        <TextView
+            android:id="@+id/txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="20.00"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/text"
+            app:layout_constraintLeft_toRightOf="@id/text" />
+
+        <Button
+            android:id="@+id/btn_sub"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded2"
+            android:text="-"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="@id/text"
+            app:layout_constraintTop_toBottomOf="@id/text" />
+
+        <TextView
+            android:id="@+id/txt_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="10"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_sub"
+            app:layout_constraintLeft_toRightOf="@id/btn_sub" />
+
+        <TextView
+            android:id="@+id/txt_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Kg"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_sub"
+            app:layout_constraintLeft_toRightOf="@id/txt_count" />
+
+
+        <Button
+            android:id="@+id/btn_sum"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="28dp"
+            android:background="@drawable/rounded2"
+            android:text="+"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_sub"
+            app:layout_constraintLeft_toRightOf="@id/txt_text1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30sp"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded"
+            android:text="$10 Discount"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_name"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
